@@ -1727,7 +1727,6 @@ function library:init()
                 if typeof(c3) ~= 'Color3' then return end
                 if typeof(a) ~= 'number' then return end
                 local h,s,v = c3:ToHSV();
-                local r,g,b = utility:ToRGB(c3);
                 h = h == 0 and 1 or h;
                 self.color = c3;
                 self.trans = a;
@@ -1737,6 +1736,7 @@ function library:init()
                 self.objects.transSlider.Position = newUDim2(0,0,a,0);
                 self.objects.pointer.Position = newUDim2(1 - s, 0, 1 - v, 0);
                 self.objects.statusText.Text = 'Editing : Unknown';
+                local r,g,b = utility:ToRGB(c3);
                 self.objects.rText.Text = string.format("%.14g", floor(r));
                 self.objects.gText.Text = string.format("%.14g", floor(g));
                 self.objects.bText.Text = string.format("%.14g", floor(b));
