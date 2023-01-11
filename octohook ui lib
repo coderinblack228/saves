@@ -1736,10 +1736,10 @@ function library:init()
                 self.objects.transSlider.Position = newUDim2(0,0,a,0);
                 self.objects.pointer.Position = newUDim2(1 - s, 0, 1 - v, 0);
                 self.objects.statusText.Text = 'Editing : Unknown';
-                local r,g,b = utility:ToRGB(c3);
-                self.objects.rText.Text = string.format("%.14g", floor(r));
-                self.objects.gText.Text = string.format("%.14g", floor(g));
-                self.objects.bText.Text = string.format("%.14g", floor(b));
+               -- local r,g,b = utility:ToRGB(c3);
+                --self.objects.rText.Text = string.format("%.14g", floor(r));
+                --self.objects.gText.Text = string.format("%.14g", floor(g));
+                --self.objects.bText.Text = string.format("%.14g", floor(b));
                 if self.selected ~= nil then
                     local txt = 'Editing : Unknown';
                     if self.selected.text ~= nil and self.selected.text ~= '' then
