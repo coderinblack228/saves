@@ -72,8 +72,8 @@ local library = {
         ['gradientp45'] = 'https://raw.githubusercontent.com/portallol/luna/main/modules/gradient45.png';
         ['colorhue'] = 'https://raw.githubusercontent.com/portallol/luna/main/modules/lgbtqshit.png';
         ['colortrans'] = 'https://raw.githubusercontent.com/portallol/luna/main/modules/trans.png';
-        ['colorsat1'] = 'https://github.com/coderinblack228/saves/blob/c59af04f42996de8bcbf1dea3b5f320a52edc7b1/cbimage.png';
-        ['colorsat2'] = 'https://github.com/coderinblack228/saves/blob/6649746636fd7f4654c22d6341689ef02f51ada2/cbimage%20(1).png';
+        ['colorsat1'] = 'https://raw.githubusercontent.com/coderinblack228/saves/blob/c59af04f42996de8bcbf1dea3b5f320a52edc7b1/cbimage.png';
+        ['colorsat2'] = 'https://raw.githubusercontent.com/coderinblack228/saves/blob/6649746636fd7f4654c22d6341689ef02f51ada2/cbimage%20(1).png';
 
     };
     numberStrings = {['Zero'] = 0, ['One'] = 1, ['Two'] = 2, ['Three'] = 3, ['Four'] = 4, ['Five'] = 5, ['Six'] = 6, ['Seven'] = 7, ['Eight'] = 8, ['Nine'] = 9};
