@@ -30,6 +30,9 @@ end
 -- // Variables
 local players, http, runservice, inputservice, tweenService, stats, actionservice = gs('Players'), gs('HttpService'), gs('RunService'), gs('UserInputService'), gs('TweenService'), gs('Stats'), gs('ContextActionService')
 local localplayer = players.LocalPlayer
+local function round(number, decimalPlaces) -- from roblos
+    return math.round(number * 10^decimalPlaces) * 10^-decimalPlaces
+end
 
 local setByConfig = false
 local floor, ceil, huge, pi, clamp = math.floor, math.ceil, math.huge, math.pi, math.clamp
@@ -4639,7 +4642,7 @@ function library:init()
                 local daySuffix = math.floor(date[2]%10)
                 date[2] = date[2]..(daySuffix == 1 and 'st' or daySuffix == 2 and 'nd' or daySuffix == 3 and 'rd' or 'th')
 
-                self.text[3][1] = math.round(((game.Players.LocalPlayer.Status.Kills.Value/game.Players.LocalPlayer.Status.Deaths.Value)*100)/100) .. ' kd/r'
+                self.text[3][1] = round(game.Players.LocalPlayer.Status.Kills.Value/game.Players.LocalPlayer.Status.Deaths.Value, 2) .. ' kd/r'
                 self.text[5][1] = library.stats.fps..' fps'
                 self.text[6][1] = floor(library.stats.ping)..'ms'
                 self.text[7][1] = os.date('%X', os.time())
