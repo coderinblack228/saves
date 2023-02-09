@@ -33,11 +33,12 @@ local localplayer = players.LocalPlayer
 local function round3(number, decimalPlaces) -- from roblos
     return math.round(number * 10^decimalPlaces) * 10^-decimalPlaces
 end
-local function round3(number, decimalPlaces)
-    if not (tostring(number) == 'nan' or 'inf') then
+local function round(number, decimalPlaces)
+    if (tostring(number) ~= 'nan' or 'inf') then
         return tonumber(string.format("%." .. tostring(decimalPlaces) .. 'f', number))
+    else
+        return number..'.'..10^decimalPlaces
     end
-    return number..'.'..10^decimalPlaces
 end
 
 local setByConfig = false
