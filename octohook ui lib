@@ -34,7 +34,6 @@ local function round3(number, decimalPlaces) -- from roblos
     return math.round(number * 10^decimalPlaces) * 10^-decimalPlaces
 end
 local function round(number, decimalPlaces)
-    tostring(number)
     return tonumber(string.format("%." .. tostring(decimalPlaces) .. 'f', number))
 end
 
