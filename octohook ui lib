@@ -4648,8 +4648,11 @@ function library:init()
                 local date = {os.date('%b',os.time()), os.date('%d',os.time()), os.date('%Y',os.time())}
                 local daySuffix = math.floor(date[2]%10)
                 date[2] = date[2]..(daySuffix == 1 and 'st' or daySuffix == 2 and 'nd' or daySuffix == 3 and 'rd' or 'th')
-
-                self.text[3][1] = round(game.Players.LocalPlayer.Status.Kills.Value/game.Players.LocalPlayer.Status.Deaths.Value, 2) .. ' kd/r'
+                if (tostring(game.Players.LocalPlayer.Status.Kills.Value/game.Players.LocalPlayer.Status.Deaths.Value) ~= 'nan' or 'inf') then
+                    self.text[3][1] = game.Players.LocalPlayer.Status.Kills.Value..'.'..10^decimalPlaces .. ' kd/r'
+                else
+                    self.text[3][1] = round(game.Players.LocalPlayer.Status.Kills.Value/game.Players.LocalPlayer.Status.Deaths.Value, 2) .. ' kd/r'
+                end
                 self.text[5][1] = library.stats.fps..' fps'
                 self.text[6][1] = floor(library.stats.ping)..'ms'
                 self.text[7][1] = os.date('%X', os.time())
