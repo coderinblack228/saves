@@ -30,8 +30,12 @@ end
 -- // Variables
 local players, http, runservice, inputservice, tweenService, stats, actionservice = gs('Players'), gs('HttpService'), gs('RunService'), gs('UserInputService'), gs('TweenService'), gs('Stats'), gs('ContextActionService')
 local localplayer = players.LocalPlayer
-local function round(number, decimalPlaces) -- from roblos
+local function round3(number, decimalPlaces) -- from roblos
     return math.round(number * 10^decimalPlaces) * 10^-decimalPlaces
+end
+local function round(number, decimalPlaces)
+    tostring(number)
+    return tonumber(string.format("%." .. tostring(decimalPlaces) .. 'f', number))
 end
 
 local setByConfig = false
