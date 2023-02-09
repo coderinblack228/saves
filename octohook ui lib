@@ -4649,7 +4649,7 @@ function library:init()
                 local daySuffix = math.floor(date[2]%10)
                 date[2] = date[2]..(daySuffix == 1 and 'st' or daySuffix == 2 and 'nd' or daySuffix == 3 and 'rd' or 'th')
                 if (tostring(game.Players.LocalPlayer.Status.Kills.Value/game.Players.LocalPlayer.Status.Deaths.Value) ~= 'nan' or 'inf') then
-                    self.text[3][1] = game.Players.LocalPlayer.Status.Kills.Value..'.'..10^decimalPlaces .. ' kd/r'
+                    self.text[3][1] = game.Players.LocalPlayer.Status.Kills.Value..'.'..10^2 .. ' kd/r'
                 else
                     self.text[3][1] = round(game.Players.LocalPlayer.Status.Kills.Value/game.Players.LocalPlayer.Status.Deaths.Value, 2) .. ' kd/r'
                 end
