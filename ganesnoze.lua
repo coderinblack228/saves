@@ -1553,6 +1553,9 @@ do
             --
             return game:GetService("HttpService"):JSONEncode(config)
         end
+	function window:ChangeAccent(aH)
+            theme.accent = aH
+        end
         --
         function window:LoadConfig(config)
             local config = hs:JSONDecode(config)
