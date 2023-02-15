@@ -72,9 +72,6 @@ local theme = {
     font = 2,
     textsize = 13
 }
-local function library:ChangeAccent(new)
-    theme.accent = new
-end
 -- // utility Functions
 do
     function utility:Size(xScale,xOffset,yScale,yOffset,instance)
