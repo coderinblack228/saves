@@ -25,9 +25,9 @@ local library = {
     hovers = {},
     Relations = {},
     folders = {
-        main = "Atlanta",
-        assets = "Atlanta/Images",
-        configs = "Atlanta/Configs"
+        main = "Siero",
+        assets = "Siero/Images",
+        configs = "Siero/Configs"
     },
     shared = {
         initialized = false,
@@ -439,7 +439,7 @@ do
         --
         theme.accent = accent
         --
-        local window = {pages = {}, loader = true, isVisible = false, pageammount = pageammount, callback = callback, wminfo = "$$$$$ AntarcticaWare $$$$$ || UID : %u || Ping : %s || Fps : %u", currentPage = nil, fading = false, dragging = false, drag = Vector2.new(0,0), currentContent = {frame = nil, dropdown = nil, multibox = nil, colorpicker = nil, keybind = nil, textbox = nil}}
+        local window = {pages = {}, loader = true, isVisible = false, pageammount = pageammount, callback = callback, wminfo = "$$$$$ Siero.pen $$$$$ || UID : %u || Ping : %s || Fps : %u", currentPage = nil, fading = false, dragging = false, drag = Vector2.new(0,0), currentContent = {frame = nil, dropdown = nil, multibox = nil, colorpicker = nil, keybind = nil, textbox = nil}}
         --
         local main_frame = utility:Create("Frame", {Vector2.new(0,0)}, {
             Size = utility:Size(0, size.X, 0, size.Y),
@@ -1552,9 +1552,6 @@ do
             end
             --
             return game:GetService("HttpService"):JSONEncode(config)
-        end
-	function window:ChangeAccent(aH)
-            theme.accent = aH
         end
         --
         function window:LoadConfig(config)
