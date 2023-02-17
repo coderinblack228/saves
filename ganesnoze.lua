@@ -60,14 +60,14 @@ local sections = {}
 -- Theme Variables
 --local themes = {}
 local theme = {
-    ['accent'] = Color3.fromRGB(147,188,222);
-    ['lightcontrast'] = Color3.fromRGB(56,54,61);
-    ['darkcontrast'] = Color3.fromRGB(40,39,46);
-    ['outline'] = Color3.fromRGB(0,0,0);
-    ['inline'] = Color3.fromRGB(63,63,67);
-    ['textcolor'] = Color3.fromRGB(255,255,255);
-    ['textborder'] = Color3.fromRGB(0,0,0);
-    ['cursoroutline'] = Color3.fromRGB(10,10,10);
+    accent = Color3.fromRGB(147,188,222);
+    lightcontrast = Color3.fromRGB(56,54,61);
+    darkcontrast = Color3.fromRGB(40,39,46);
+    outline = Color3.fromRGB(0,0,0);
+    inline = Color3.fromRGB(63,63,67);
+    textcolor = Color3.fromRGB(255,255,255);
+    textborder = Color3.fromRGB(0,0,0);
+    cursoroutline = Color3.fromRGB(10,10,10);
     font = 2,
     textsize = 13
 }
