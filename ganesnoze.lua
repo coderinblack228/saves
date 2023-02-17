@@ -25,9 +25,9 @@ local library = {
     hovers = {},
     Relations = {},
     folders = {
-        main = "Siero",
-        assets = "Siero/Images",
-        configs = "Siero/Configs"
+        main = "Russianware",
+        assets = "Russianware/Images",
+        configs = "Russianware/Configs"
     },
     shared = {
         initialized = false,
