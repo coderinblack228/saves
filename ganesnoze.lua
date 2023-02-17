@@ -25,9 +25,9 @@ local library = {
     hovers = {},
     Relations = {},
     folders = {
-        main = "Russianware",
-        assets = "Russianware/Images",
-        configs = "Russianware/Configs"
+        main = "Atlanta",
+        assets = "Atlanta/Images",
+        configs = "Atlanta/Configs"
     },
     shared = {
         initialized = false,
@@ -60,14 +60,14 @@ local sections = {}
 -- Theme Variables
 --local themes = {}
 local theme = {
-    ['accent'] = Color3.fromRGB(30,193,81);
-    ['lightcontrast'] = Color3.fromRGB(19,19,19);
-    ['darkcontrast'] = Color3.fromRGB(16,16,16);
-    ['outline'] = Color3.fromRGB(0,0,0);
-    ['inline'] = Color3.fromRGB(36,36,36);
-    ['textcolor'] = Color3.fromRGB(255,255,255);
-    ['textborder'] = Color3.fromRGB(0,0,0);
-    ['cursoroutline'] = Color3.fromRGB(10,10,10);
+    accent = Color3.fromRGB(30,193,81);
+    lightcontrast = Color3.fromRGB(19,19,19);
+    darkcontrast = Color3.fromRGB(16,16,16);
+    outline = Color3.fromRGB(0,0,0);
+    inline = Color3.fromRGB(36,36,36);
+    textcolor = Color3.fromRGB(255,255,255);
+    textborder = Color3.fromRGB(0,0,0);
+    cursoroutline = Color3.fromRGB(10,10,10);
     font = 2,
     textsize = 13
 }
