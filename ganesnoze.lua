@@ -60,14 +60,15 @@ local sections = {}
 -- Theme Variables
 --local themes = {}
 local theme = {
-    accent = Color3.fromRGB(30,193,81);
-    lightcontrast = Color3.fromRGB(19,19,19);
-    darkcontrast = Color3.fromRGB(16,16,16);
-    outline = Color3.fromRGB(0,0,0);
-    inline = Color3.fromRGB(36,36,36);
-    textcolor = Color3.fromRGB(255,255,255);
-    textborder = Color3.fromRGB(0,0,0);
-    cursoroutline = Color3.fromRGB(10,10,10);
+    accent = Color3.fromRGB(55, 175, 225),
+    lightcontrast = Color3.fromRGB(30, 30, 30),
+    darkcontrast = Color3.fromRGB(20, 20, 20),
+    outline = Color3.fromRGB(0, 0, 0),
+    inline = Color3.fromRGB(50, 50, 50),
+    textcolor = Color3.fromRGB(255, 255, 255),
+    textdark = Color3.fromRGB(175, 175, 175),
+    textborder = Color3.fromRGB(0, 0, 0),
+    cursoroutline = Color3.fromRGB(10, 10, 10),
     font = 2,
     textsize = 13
 }
@@ -438,7 +439,7 @@ do
         --
         theme.accent = accent
         --
-        local window = {pages = {}, loader = true, isVisible = false, pageammount = pageammount, callback = callback, wminfo = "$$$$$ Siero.pen $$$$$ || UID : %u || Ping : %s || Fps : %u", currentPage = nil, fading = false, dragging = false, drag = Vector2.new(0,0), currentContent = {frame = nil, dropdown = nil, multibox = nil, colorpicker = nil, keybind = nil, textbox = nil}}
+        local window = {pages = {}, loader = true, isVisible = false, pageammount = pageammount, callback = callback, wminfo = "$$$$$ AntarcticaWare $$$$$ || UID : %u || Ping : %s || Fps : %u", currentPage = nil, fading = false, dragging = false, drag = Vector2.new(0,0), currentContent = {frame = nil, dropdown = nil, multibox = nil, colorpicker = nil, keybind = nil, textbox = nil}}
         --
         local main_frame = utility:Create("Frame", {Vector2.new(0,0)}, {
             Size = utility:Size(0, size.X, 0, size.Y),
