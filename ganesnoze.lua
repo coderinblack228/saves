@@ -603,7 +603,7 @@ do
     function library:Notification(info)
     end
     --
-    function library:ChangeThemeOption(option, color)
+   --[[ function library:ChangeThemeOption(option, color)
         theme[option] = color
     
         for obj, theme in next, theme do
@@ -624,7 +624,7 @@ do
             end
         end
     
-    end
+    end]]
     --
     function library:Loader(info)
 		local info = info or {}
