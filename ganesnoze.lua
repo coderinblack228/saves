@@ -60,14 +60,14 @@ local sections = {}
 -- Theme Variables
 --local themes = {}
 local theme = {
-    accent = Color3.fromRGB(147,188,222);
-    lightcontrast = Color3.fromRGB(56,54,61);
-    darkcontrast = Color3.fromRGB(40,39,46);
-    outline = Color3.fromRGB(0,0,0);
-    inline = Color3.fromRGB(63,63,67);
-    textcolor = Color3.fromRGB(255,255,255);
-    textborder = Color3.fromRGB(0,0,0);
-    cursoroutline = Color3.fromRGB(10,10,10);
+    ['accent'] = Color3.fromRGB(30,193,81);
+    ['lightcontrast'] = Color3.fromRGB(19,19,19);
+    ['darkcontrast'] = Color3.fromRGB(16,16,16);
+    ['outline'] = Color3.fromRGB(0,0,0);
+    ['inline'] = Color3.fromRGB(36,36,36);
+    ['textcolor'] = Color3.fromRGB(255,255,255);
+    ['textborder'] = Color3.fromRGB(0,0,0);
+    ['cursoroutline'] = Color3.fromRGB(10,10,10);
     font = 2,
     textsize = 13
 }
@@ -1551,14 +1551,6 @@ do
             end
             --
             return game:GetService("HttpService"):JSONEncode(config)
-        end
-        function window:ChangeAccent(aH)
-            theme.accent = aH
-            for aG, O in next, library.accents do
-                if O.Color ~= theme.light_contrast then
-                    O.Color = aH
-                end
-            end
         end
         --
         function window:LoadConfig(config)
