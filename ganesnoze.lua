@@ -58,20 +58,19 @@ local utility = {
 local pages = {}
 local sections = {}
 -- Theme Variables
+--local themes = {}
 local theme = {
-    ['accent'] = Color3.fromRGB(0,158,210);
-    ['lightcontrast'] = Color3.fromRGB(0,13,23);
-    ['darkcontrast'] = Color3.fromRGB(3,4,17);
-    ['outline'] = Color3.fromRGB(1,1,1);
-    ['inline'] = Color3.fromRGB(29,30,39);
+    ['accent'] = Color3.fromRGB(147,188,222);
+    ['lightcontrast'] = Color3.fromRGB(56,54,61);
+    ['darkcontrast'] = Color3.fromRGB(40,39,46);
+    ['outline'] = Color3.fromRGB(0,0,0);
+    ['inline'] = Color3.fromRGB(63,63,67);
     ['textcolor'] = Color3.fromRGB(255,255,255);
     ['textborder'] = Color3.fromRGB(0,0,0);
     ['cursoroutline'] = Color3.fromRGB(10,10,10);
     font = 2,
     textsize = 13
 }
-
-
 -- // utility Functions
 do
     function utility:Size(xScale,xOffset,yScale,yOffset,instance)
@@ -428,29 +427,6 @@ do
     --
     function library:Notification(info)
     end
-    --
-   --[[ function library:ChangeThemeOption(option, color)
-        theme[option] = color
-    
-        for obj, theme in next, theme do
-            if rawget(obj, "exists") == true and theme == option then
-                obj.Color = color
-            end
-        end
-    end
-    --
-    function library:SetTheme(theme)
-        self.currenttheme = theme
-    
-        self.theme = table.clone(theme)
-    
-        for object, color in next, theme do
-            if rawget(object, "exists") == true then
-                object.Color = self.theme[color]
-            end
-        end
-    
-    end]]
     --
     function library:Loader(info)
 		local info = info or {}
@@ -926,7 +902,7 @@ do
         --
         theme.accent = accent
         --
-        local window = {pages = {}, loader = style == 2, init = false, pageammount = pageammount, isVisible = false, callback = callback, uibind = Enum.KeyCode.Z, wminfo = "$$$$$ Siero.pem $$$$$ || UID : %u || Ping : %s || Fps : %u", currentPage = nil, fading = false, dragging = false, drag = Vector2.new(0,0), currentContent = {frame = nil, dropdown = nil, multibox = nil, colorpicker = nil, keybind = nil, textbox = nil}}
+        local window = {pages = {}, loader = style == 2, init = false, pageammount = pageammount, isVisible = false, callback = callback, uibind = Enum.KeyCode.Z, wminfo = "$$$$$ AntarcticaWare $$$$$ || UID : %u || Ping : %s || Fps : %u", currentPage = nil, fading = false, dragging = false, drag = Vector2.new(0,0), currentContent = {frame = nil, dropdown = nil, multibox = nil, colorpicker = nil, keybind = nil, textbox = nil}}
         --
         local main_frame = utility:Create("Frame", {Vector2.new(0,0)}, {
             Size = utility:Size(0, size.X, 0, size.Y),
@@ -1575,6 +1551,14 @@ do
             end
             --
             return game:GetService("HttpService"):JSONEncode(config)
+        end
+        function window:ChangeAccent(aH)
+            theme.accent = aH
+            for aG, O in next, library.accents do
+                if O.Color ~= theme.light_contrast then
+                    O.Color = aH
+                end
+            end
         end
         --
         function window:LoadConfig(config)
